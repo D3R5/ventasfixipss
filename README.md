@@ -175,6 +175,7 @@ Body:
 }
 
 ```
+<img width="1022" height="382" alt="registro" src="https://github.com/user-attachments/assets/7cc72ddf-2fc4-40bf-939b-f7b824210e00" />
 
 ---
 
@@ -192,6 +193,9 @@ Body:
   "password": "123456"
 }
 ```
+<img width="1022" height="384" alt="login" src="https://github.com/user-attachments/assets/17a1a205-59c5-446f-a638-f367dcb5b7f2" />
+
+
 
 📌 Respuesta: devuelve `token`
 
@@ -204,12 +208,14 @@ Body:
 ```
 GET http://localhost:3000/api/users
 ```
+![Uploading obtener todos los usuarios.png…]()
 
 ### GET por ID
 
 ```
 GET http://localhost:3000/api/users/1
 ```
+<img width="1025" height="244" alt="obtener usuarios por id" src="https://github.com/user-attachments/assets/965f9f7b-4261-46fb-8e94-751868d185d2" />
 
 ### POST crear
 
@@ -228,18 +234,21 @@ Body:
   "password": "123456"
 }
 ```
+<img width="1026" height="256" alt="crear usuario" src="https://github.com/user-attachments/assets/7911f361-07da-479a-9091-5abe25613948" />
 
 ### PUT actualizar
 
 ```
 PUT http://localhost:3000/api/users/1
 ```
+<img width="1025" height="244" alt="actualizar usuario" src="https://github.com/user-attachments/assets/a3ef6204-cef8-4b36-9e7d-0c36bf9b868d" />
 
 ### DELETE
 
 ```
 DELETE http://localhost:3000/api/users/1
 ```
+<img width="1021" height="234" alt="borrar usuario" src="https://github.com/user-attachments/assets/7d88542c-eb54-4191-b49e-865c70bd67f4" />
 
 ---
 
@@ -250,12 +259,14 @@ DELETE http://localhost:3000/api/users/1
 ```
 GET http://localhost:3000/api/products
 ```
+<img width="1483" height="648" alt="obtener todos los productos" src="https://github.com/user-attachments/assets/78c52bb4-560d-4dba-ad8d-5e57b8bbf313" />
 
 ### GET por ID
 
 ```
 GET http://localhost:3000/api/products/1
 ```
+<img width="1025" height="383" alt="obtener productos por id" src="https://github.com/user-attachments/assets/5f1f555b-b9a5-4695-93b2-dbe29709c2f2" />
 
 ### POST crear
 
@@ -279,18 +290,21 @@ Body:
   "stock_alto": 20
 }
 ```
+<img width="1026" height="368" alt="crear producto" src="https://github.com/user-attachments/assets/a52f2931-63ca-4487-9758-c832e01c7d08" />
 
 ### PUT actualizar
 
 ```
 PUT http://localhost:3000/api/products/1
 ```
+<img width="1026" height="366" alt="producto actualizado" src="https://github.com/user-attachments/assets/4a3037c7-aab3-4378-a30f-53bbc4ba56d9" />
 
 ### DELETE
 
 ```
 DELETE http://localhost:3000/api/products/1
 ```
+<img width="1024" height="167" alt="producto eliminado" src="https://github.com/user-attachments/assets/0275cc05-aa50-4b06-ac51-adf8188ac546" />
 
 ---
 
@@ -301,12 +315,14 @@ DELETE http://localhost:3000/api/products/1
 ```
 GET http://localhost:3000/api/clients
 ```
+<img width="1489" height="526" alt="obtener todos los clientes" src="https://github.com/user-attachments/assets/973662ce-f46e-4d86-be96-51df5a76581f" />
 
 ### GET por ID
 
 ```
 GET http://localhost:3000/api/clients/1
 ```
+<img width="1023" height="312" alt="obtener clientes por id" src="https://github.com/user-attachments/assets/6e0e9f2c-4a90-4b21-9983-8896d06b7f1b" />
 
 ### POST crear
 
@@ -327,18 +343,21 @@ Body:
   "email_contacto": "juan@empresa.cl"
 }
 ```
+<img width="1024" height="300" alt="crear cliente" src="https://github.com/user-attachments/assets/f23f1799-eb91-4545-8849-067338e00b25" />
 
 ### PUT actualizar
 
 ```
 PUT http://localhost:3000/api/clients/1
 ```
+<img width="1023" height="306" alt="actualizar cliente" src="https://github.com/user-attachments/assets/38238479-ddf4-4f1c-bd00-3f5a99fb1a22" />
 
 ### DELETE
 
 ```
 DELETE http://localhost:3000/api/clients/1
 ```
+<img width="1023" height="273" alt="eliminar cliente" src="https://github.com/user-attachments/assets/cbdd89c3-535e-478e-a0d0-c38a01c16062" />
 
 ---
 
