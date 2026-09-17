@@ -401,6 +401,18 @@ Content-Type: application/json
 
 ---
 
+## 📸 Capturas WEB
+<img width="1920" height="1176" alt="crearusuario" src="https://github.com/user-attachments/assets/a7534ca8-ad5c-40bc-a65d-2f32cd23b796" />
+<img width="1920" height="1176" alt="ingreso" src="https://github.com/user-attachments/assets/d1891d1b-29ab-4877-9c40-f6e8a5c2c6ba" />
+<img width="1920" height="1176" alt="Inicio" src="https://github.com/user-attachments/assets/533c7032-a5e7-49cd-a25c-b8d62635b7a8" />
+<img width="1920" height="959" alt="dashboard" src="https://github.com/user-attachments/assets/4651bc39-5d0d-41fd-b627-7a9afa66599a" />
+<img width="1920" height="959" alt="usuariosedicion" src="https://github.com/user-attachments/assets/e7b1fdb4-aaac-44ed-bdf9-d96bc7b6fcb9" />
+<img width="1920" height="959" alt="usuarios" src="https://github.com/user-attachments/assets/91ca7688-e6cd-473f-9b88-3727a7ebeac1" />
+<img width="1920" height="959" alt="productos" src="https://github.com/user-attachments/assets/78310003-85bb-40e1-a434-afc14ff5ac52" />
+<img width="1920" height="959" alt="clientes" src="https://github.com/user-attachments/assets/9ef2ed9a-4dec-4b75-a80c-68fe56cf3c84" />
+
+---
+
 ## 👨‍💻 Autor
 Diego Rivera Spröhnle
 Proyecto desarrollado como evaluación de microservicio con Next.js.
