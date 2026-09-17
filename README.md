@@ -168,10 +168,10 @@ Body:
 ```json
 {
   "rut": "12345678-9",
-  "nombre": "Diego",
+  "nombre": "Diego Ipss",
   "apellido": "Rivera",
-  "email": "diego@ventasfix.cl",
-  "password": "123456"
+  "email": "diegoipss@ventasfix.cl",
+  "password": "admin123"
 }
 
 ```
@@ -189,8 +189,8 @@ Body:
 
 ```json
 {
-  "email": "diego@ventasfix.cl",
-  "password": "123456"
+  "email": "diegoipss@ventasfix.cl",
+  "password": "admin123"
 }
 ```
 <img width="1022" height="384" alt="login" src="https://github.com/user-attachments/assets/17a1a205-59c5-446f-a638-f367dcb5b7f2" />
@@ -208,7 +208,7 @@ Body:
 ```
 GET http://localhost:3000/api/users
 ```
-![Uploading obtener todos los usuarios.png…]()
+<img width="1024" height="402" alt="obtener todos los usuarios" src="https://github.com/user-attachments/assets/51570517-eca9-4938-b761-c73541b6ee88" />
 
 ### GET por ID
 
@@ -228,9 +228,9 @@ Body:
 ```json
 {
   "rut": "11111111-1",
-  "nombre": "Admin",
-  "apellido": "Test",
-  "email": "admin@ventasfix.cl",
+  "nombre": "Juan",
+  "apellido": "Perez",
+  "email": "juan@ventasfix.cl",
   "password": "123456"
 }
 ```
@@ -278,10 +278,10 @@ Body:
 
 ```json
 {
-  "sku": "ABC123",
-  "nombre": "Producto 1",
-  "descripcion_corta": "Corto",
-  "descripcion_larga": "Largo",
+  "sku": "PROD-001",
+  "nombre": "Producto Test",
+  "descripcion_corta": "Corta",
+  "descripcion_larga": "Larga",
   "imagen": "img.jpg",
   "precio_neto": 10000,
   "stock_actual": 10,
@@ -339,8 +339,8 @@ Body:
   "razon_social": "Empresa SPA",
   "telefono": "123456789",
   "direccion": "Santiago",
-  "nombre_contacto": "Juan Perez",
-  "email_contacto": "juan@empresa.cl"
+  "nombre_contacto": "Pedro",
+  "email_contacto": "pedro@empresa.cl"
 }
 ```
 <img width="1024" height="300" alt="crear cliente" src="https://github.com/user-attachments/assets/f23f1799-eb91-4545-8849-067338e00b25" />
