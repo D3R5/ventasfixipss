@@ -42,7 +42,6 @@ const cards = [
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-slate-950 text-white px-6 py-10">
-      {/* HERO */}
       <section className="max-w-5xl mx-auto mb-10">
         <div className="p-8 rounded-2xl bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 shadow-xl">
           <h1 className="text-4xl font-bold tracking-tight">
@@ -55,7 +54,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CARDS */}
       <section className="max-w-5xl mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {cards.map((card) => (
           <Link
@@ -73,7 +71,6 @@ export default function HomePage() {
               {card.desc}
             </p>
 
-            {/* glow hover */}
             <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition bg-gradient-to-r from-indigo-500/10 to-pink-500/10" />
           </Link>
         ))}

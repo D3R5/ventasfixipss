@@ -1,4 +1,3 @@
-// app/api/clients/route.ts
 
 import { NextResponse } from 'next/server';
 
@@ -18,7 +17,7 @@ async function requireAuth(req: Request) {
 
 }
 
-// GET: listar todos los clientes (protegido)
+// GET: listar todos los clientes 
 
 export async function GET(req: Request) {
 
@@ -32,9 +31,7 @@ export async function GET(req: Request) {
 
 }
 
-// POST: crear cliente (protegido)
-
-// campos obligatorios: rut_empresa, rubro, razon_social, telefono, direccion, nombre_contacto, email_contacto
+// POST: crear cliente 
 
 export async function POST(req: Request) {
 
@@ -84,7 +81,6 @@ export async function POST(req: Request) {
 
   }
 
-  // validar email_contacto básico
 
   if (!/\S+@\S+\.\S+/.test(email_contacto)) {
 

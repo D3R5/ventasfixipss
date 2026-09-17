@@ -1,9 +1,8 @@
-// app/api/products/route.ts
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { getTokenFromHeader, verifyToken } from '@/lib/auth';
 
-// requireAuth helper (same pattern que en users)
+
 async function requireAuth(req: Request) {
   const token = getTokenFromHeader(req);
   if (!token) return null;
@@ -11,7 +10,7 @@ async function requireAuth(req: Request) {
   return data;
 }
 
-// GET: lista todos los productos (protegido)
+// GET: lista todos los productos 
 export async function GET(req: Request) {
   const auth = await requireAuth(req);
   if (!auth) return NextResponse.json({ error: 'No autorizado' }, { status: 401 });
@@ -20,8 +19,7 @@ export async function GET(req: Request) {
   return NextResponse.json(products);
 }
 
-// POST: crea producto (protegido)
-// campos obligatorios: sku, nombre, descripcion_corta, descripcion_larga, imagen, precio_neto, stock_actual, stock_minimo, stock_bajo, stock_alto
+// POST: crea producto 
 export async function POST(req: Request) {
   const auth = await requireAuth(req);
   if (!auth) return NextResponse.json({ error: 'No autorizado' }, { status: 401 });
@@ -40,7 +38,6 @@ export async function POST(req: Request) {
     stock_alto
   } = body || {};
 
-  // validaciones
   if (
     !sku ||
     !nombre ||

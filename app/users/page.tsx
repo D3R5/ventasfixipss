@@ -37,7 +37,6 @@ export default function UsersPage() {
       return;
     }
     load();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   async function load() {
@@ -187,7 +186,6 @@ export default function UsersPage() {
   return (
     <div className="px-6 py-8">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
           <div>
             <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight">Usuarios</h1>
@@ -212,7 +210,6 @@ export default function UsersPage() {
           </div>
         </div>
 
-        {/* Table */}
         <div className="overflow-x-auto rounded-2xl border border-slate-800 bg-slate-950 shadow-sm">
           <table className="min-w-full divide-y divide-slate-800">
             <thead className="bg-slate-900">
@@ -262,7 +259,6 @@ export default function UsersPage() {
           </table>
         </div>
 
-        {/* Create Modal */}
         {showCreate && (
           <div
             role="dialog"
@@ -331,7 +327,6 @@ export default function UsersPage() {
           </div>
         )}
 
-        {/* Edit Modal */}
         {showEdit && editing && (
           <div
             role="dialog"

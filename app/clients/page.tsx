@@ -35,7 +35,6 @@ export default function ClientsPage() {
 
   const getToken = () => localStorage.getItem("token");
 
-  // 🔹 GET CLIENTS
   const fetchClients = async () => {
     try {
       const token = getToken();
@@ -68,10 +67,8 @@ export default function ClientsPage() {
 
   useEffect(() => {
     fetchClients();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // 🔹 CREATE
   const createClient = async (client: any) => {
     const res = await fetch("/api/clients", {
       method: "POST",
@@ -89,7 +86,6 @@ export default function ClientsPage() {
     return res.json();
   };
 
-  // updateClient
   const updateClient = async (id: number, client: any) => {
     const url = `/api/clients/${encodeURIComponent(id)}`;
     console.log("[DEBUG] UPDATE url:", url, "payload:", client);
@@ -108,7 +104,6 @@ export default function ClientsPage() {
     return res.json();
   };
 
-  // deleteClient
   const deleteClient = async (id: number) => {
     const url = `/api/clients/${encodeURIComponent(id)}`;
     console.log("[DEBUG] DELETE url:", url);
@@ -125,7 +120,6 @@ export default function ClientsPage() {
     return res.json();
   };
 
-  // 🔹 SUBMIT FORM
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
@@ -139,7 +133,6 @@ export default function ClientsPage() {
         setClients((prev) => [...prev, newClient]);
       }
 
-      // limpiar form
       setForm({
         rut_empresa: "",
         rubro: "",
@@ -154,7 +147,6 @@ export default function ClientsPage() {
     }
   };
 
-  // 🔹 EDIT
   const handleEdit = (client: Client) => {
     setForm({
       rut_empresa: client.rut_empresa,
@@ -168,7 +160,6 @@ export default function ClientsPage() {
     setEditingId(client.id);
   };
 
-  // 🔹 DELETE
   const handleDelete = async (id: number) => {
     if (!confirm("¿Eliminar cliente?")) return;
 
@@ -216,7 +207,6 @@ export default function ClientsPage() {
         <div className="text-sm text-slate-400">Gestiona tus clientes y contactos</div>
       </div>
 
-      {/* FORM */}
       <form onSubmit={handleSubmit} className="bg-slate-900 border border-slate-800 rounded-2xl p-5 mb-6 shadow-sm">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <input
@@ -308,7 +298,6 @@ export default function ClientsPage() {
         </div>
       </form>
 
-      {/* LISTADO */}
       <ul className="grid gap-3">
         {clients.map((c) => (
           <li key={c.id} className="p-4 border rounded-lg bg-slate-900 border-slate-800 shadow-sm">

@@ -54,7 +54,6 @@ export default function DashboardPage() {
         </header>
 
         <section className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {/* Card: Usuarios */}
           <div
             role="region"
             aria-label="Usuarios"
@@ -75,7 +74,6 @@ export default function DashboardPage() {
             <div className="absolute right-0 top-0 h-24 w-1.5 bg-indigo-500/60" />
           </div>
 
-          {/* Card: Productos */}
           <div
             role="region"
             aria-label="Productos"
@@ -96,7 +94,6 @@ export default function DashboardPage() {
             <div className="absolute right-0 top-0 h-24 w-1.5 bg-emerald-500/50" />
           </div>
 
-          {/* Card: Clientes */}
           <div
             role="region"
             aria-label="Clientes"

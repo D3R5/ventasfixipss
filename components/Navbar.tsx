@@ -8,11 +8,9 @@ export default function NavBar() {
   const pathname = usePathname();
   const router = useRouter();
 
-  // determinista en server: isMounted = false
   const [isMounted, setIsMounted] = useState(false);
   const [token, setToken] = useState<string | null>(null);
 
-  // estado del menu mobile
   const [mobileOpen, setMobileOpen] = useState(false);
 
   useEffect(() => {
@@ -25,12 +23,10 @@ export default function NavBar() {
     }
   }, []);
 
-  // cerrar menu mobile cuando cambie de ruta
   useEffect(() => {
     setMobileOpen(false);
   }, [pathname]);
 
-  // cerrar con ESC
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setMobileOpen(false);
@@ -53,7 +49,6 @@ export default function NavBar() {
     <nav className="bg-slate-900 text-white/95 shadow-sm ring-1 ring-black/10 sticky top-0 z-40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          {/* left: brand + nav links */}
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center gap-3">
               <div className="h-9 w-9 flex items-center justify-center rounded-md bg-gradient-to-br from-indigo-500 to-pink-500 text-white font-bold">
@@ -62,7 +57,6 @@ export default function NavBar() {
               <span className="text-lg font-semibold tracking-tight hover:opacity-90">VentasFix</span>
             </Link>
 
-            {/* Desktop nav */}
             <div className="hidden md:flex items-center space-x-1">
               <NavLink href="/dashboard" active={isActive('/dashboard')}>Dashboard</NavLink>
               <NavLink href="/users" active={isActive('/users')}>Usuarios</NavLink>
@@ -71,9 +65,7 @@ export default function NavBar() {
             </div>
           </div>
 
-          {/* right: auth actions + mobile button */}
           <div className="flex items-center gap-3">
-            {/* Auth actions (same logic) */}
             <div className="hidden sm:flex items-center space-x-3">
               {!isMounted ? (
                 <div className="h-8 w-28 rounded-md bg-slate-800/60" aria-hidden />
@@ -105,7 +97,6 @@ export default function NavBar() {
               )}
             </div>
 
-            {/* Mobile hamburger */}
             <button
               type="button"
               className="inline-flex items-center justify-center p-2 rounded-md text-slate-200 hover:bg-slate-800/60 focus:outline-none focus:ring-2 focus:ring-indigo-500 md:hidden"
@@ -116,12 +107,10 @@ export default function NavBar() {
             >
               <span className="sr-only">{mobileOpen ? 'Cerrar menú' : 'Abrir menú'}</span>
               {mobileOpen ? (
-                // Close icon
                 <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
                 </svg>
               ) : (
-                // Menu icon
                 <svg className="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden>
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
@@ -131,7 +120,6 @@ export default function NavBar() {
         </div>
       </div>
 
-      {/* Mobile menu panel */}
       <div
         id="mobile-menu"
         className={[
@@ -141,7 +129,6 @@ export default function NavBar() {
         aria-hidden={!mobileOpen}
       >
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-900/95 border-t border-slate-800">
-          {/* Mobile links */}
           <MobileLink href="/dashboard" active={isActive('/dashboard')} onClick={() => setMobileOpen(false)}>Dashboard</MobileLink>
           <MobileLink href="/users" active={isActive('/users')} onClick={() => setMobileOpen(false)}>Usuarios</MobileLink>
           <MobileLink href="/products" active={isActive('/products')} onClick={() => setMobileOpen(false)}>Productos</MobileLink>
@@ -185,7 +172,6 @@ export default function NavBar() {
   );
 }
 
-/* Presentational desktop link */
 function NavLink({ href, children, active }: { href: string; children: React.ReactNode; active?: boolean }) {
   return (
     <Link
@@ -199,12 +185,11 @@ function NavLink({ href, children, active }: { href: string; children: React.Rea
       ].join(' ')}
     >
       {children}
-      <span className="ml-2 text-xs text-slate-400" aria-hidden>{/* decorative spacer */}</span>
+      <span className="ml-2 text-xs text-slate-400" aria-hidden>{}</span>
     </Link>
   );
 }
 
-/* Mobile link (block, full width) */
 function MobileLink({ href, children, active, onClick }: { href: string; children: React.ReactNode; active?: boolean; onClick?: () => void }) {
   return (
     <Link

@@ -1,4 +1,3 @@
-// app/api/clients/[id]/route.ts
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getTokenFromHeader, verifyToken } from "@/lib/auth";
@@ -11,9 +10,7 @@ async function requireAuth(req: Request) {
   return data;
 }
 
-// intenta parsear id desde params y, si no existe, desde la URL
 function extractId(req: Request, params?: { id?: string }) {
-  // logueo para debugging — elimina en prod
   console.info("[DEBUG] context.params =", params);
   console.info("[DEBUG] request.url =", req.url);
 
@@ -24,11 +21,9 @@ function extractId(req: Request, params?: { id?: string }) {
     return { id };
   }
 
-  // fallback: extraer último segmento de la path
   try {
     const url = new URL(req.url);
     const parts = url.pathname.split("/").filter(Boolean);
-    // suponiendo ruta .../api/clients/<id>
     const last = parts[parts.length - 1];
     const id = Number(last);
     if (!last || !Number.isInteger(id)) return { error: "Falta id (no viene en params ni en URL)" };

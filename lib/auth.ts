@@ -1,4 +1,3 @@
-// lib/auth.ts
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { NextResponse } from 'next/server';
@@ -28,7 +27,6 @@ export const verifyToken = (token: string) => {
   }
 };
 
-// helper to read bearer token from headers in route handlers
 export const getTokenFromHeader = (req: Request) => {
   const auth = req.headers.get('authorization') || '';
   if (!auth) return null;

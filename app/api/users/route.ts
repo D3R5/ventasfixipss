@@ -1,4 +1,3 @@
-// app/api/users/route.ts
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { hashPassword, getTokenFromHeader, verifyToken } from '@/lib/auth';
@@ -54,7 +53,6 @@ export async function POST(request: Request) {
       data: { rut, nombre, apellido, email, password: passwordHash }
     });
 
-    // devolver sin password
     const { password: _p, ...safeUser } = user as any;
     return NextResponse.json(safeUser, { status: 201 });
   } catch (err: any) {

@@ -29,7 +29,6 @@ export default function Footer({ companyName = 'VentasFix IPSS 2026', small = fa
             </div>
           </div>
 
-          {/* Navigation */}
           <nav aria-label="Enlaces del pie" className="flex flex-wrap gap-3 justify-center">
             <Link href="/dashboard" className="text-sm hover:text-white focus:outline-none focus:ring-2 focus:ring-indigo-500 rounded px-2 py-1">
               Dashboard

@@ -40,10 +40,8 @@ export default function ProductsPage() {
   useEffect(() => {
     if (!token) return router.push('/login');
     fetchProducts();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  // CREATE
   const handleCreate = async () => {
     await fetch('/api/products', {
       method: 'POST',
@@ -66,7 +64,6 @@ export default function ProductsPage() {
     fetchProducts();
   };
 
-  // DELETE
   const handleDelete = async (id: number) => {
     await fetch(`/api/products/${id}`, {
       method: 'DELETE',
@@ -75,7 +72,6 @@ export default function ProductsPage() {
     fetchProducts();
   };
 
-  // UPDATE
   const handleUpdate = async () => {
     await fetch(`/api/products/${editingId}`, {
       method: 'PUT',
@@ -119,7 +115,6 @@ export default function ProductsPage() {
           </div>
         </header>
 
-        {/* CREATE FORM */}
         <section className="mb-6 bg-slate-900 border border-slate-800 rounded-2xl p-5 shadow-sm">
           <div className="grid grid-cols-1 sm:grid-cols-4 gap-3">
             <input
@@ -159,7 +154,6 @@ export default function ProductsPage() {
           </div>
         </section>
 
-        {/* TABLE */}
         <section className="overflow-x-auto rounded-2xl border border-slate-800 bg-gradient-to-b from-slate-950 to-slate-900 shadow-sm">
           <table className="min-w-full divide-y divide-slate-800">
             <thead className="bg-slate-900">
@@ -294,7 +288,6 @@ export default function ProductsPage() {
             </tbody>
           </table>
 
-          {/* small footer / spacing */}
           <div className="p-4 text-xs text-slate-500">Total: {products.length} productos</div>
         </section>
       </div>

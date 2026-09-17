@@ -51,7 +51,6 @@ export default function RegisterPage() {
         return;
       }
 
-      // Guardar token y redirigir al dashboard
       if (data.token) localStorage.setItem('token', data.token);
       router.push('/dashboard');
     } catch (error) {

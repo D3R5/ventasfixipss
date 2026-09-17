@@ -1,4 +1,3 @@
-// app/api/users/[id]/route.ts
 import { NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { hashPassword, getTokenFromHeader, verifyToken } from '@/lib/auth';
@@ -13,7 +12,6 @@ async function requireAuth(request: Request) {
   }
 }
 
-/** Helper para soportar context.params que puede ser Promise o objeto */
 async function resolveParams(context?: { params?: any }) {
   if (!context) return undefined;
   const params = context.params;
@@ -72,7 +70,6 @@ export async function PUT(request: Request, context: { params?: any }) {
       return NextResponse.json({ error: 'El email debe ser @ventasfix.cl' }, { status: 400 });
     }
 
-    // comprobar unicidad excluyendo el propio id
     const conflict = await prisma.user.findFirst({
       where: {
         AND: [
