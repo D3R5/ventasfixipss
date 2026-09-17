@@ -1,4 +1,4 @@
-# 🛒 VentasFix Backoffice 
+# Examen VentasFix 
 ## 👨‍💻 Autor
 Diego Rivera Spröhnle
 ## 📌 Descripción
@@ -415,4 +415,17 @@ Content-Type: application/json
 
 ## 👨‍💻 Autor
 Diego Rivera Spröhnle
-Proyecto desarrollado como evaluación de microservicio con Next.js.
+Proyecto desarrollado como examen de Desarrollo Web IPSS.
+
+## 🤖 Uso de Inteligencia Artificial
+
+Durante el desarrollo de esta evaluación se utilizó **Inteligencia Artificial** como herramienta de apoyo para acelerar el proceso de construcción del sistema. Su uso se enfocó en:
+
+* Generación de estructuras base del proyecto
+* Apoyo en la implementación de funcionalidades (autenticación, API, CRUD)
+* Resolución de problemas técnicos y optimización de código
+* Buenas prácticas en el desarrollo con Next.js, Prisma y JWT
+
+La IA fue utilizada como una herramienta complementaria, manteniendo siempre la comprensión y validación del funcionamiento del código por parte del desarrollador.
+
+**Fin del README**
